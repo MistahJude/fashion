@@ -1,1 +1,222 @@
-/*# sourceMappingURL=main.css.map */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--color-text-900);
+  background-color: var(--color-bg);
+}
+
+:root {
+  --color-primary: rgb(229, 199, 67);
+  --color-text-900: rgb(0, 0, 0);
+  --color-text-400: rgb(127, 127, 127);
+  --color-text-100: rgb(255, 255, 255);
+  --color-bg: rgb(255, 255, 255);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+.button {
+  background-color: rgb(0, 0, 0);
+  color: var(--color-text-100);
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+}
+
+.header {
+  margin-top: 1rem;
+}
+.header .full-logo {
+  display: none;
+}
+.header-navigation {
+  display: none;
+}
+
+.wrapper {
+  width: min(100% - 2rem, 87.5rem);
+  margin-inline: auto;
+}
+
+.hero {
+  margin-block: 2rem;
+}
+.hero-writeups {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+.hero-writeups .heading {
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 2.6rem;
+}
+.hero-image {
+  display: none;
+}
+
+.partners {
+  background-color: var(--color-primary);
+}
+.partners-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+.partners-wrapper img {
+  /* Work on size of logos */
+  mix-blend-mode: multiply;
+}
+
+.new-arrivals {
+  margin-top: 3rem;
+}
+.new-arrivals-heading {
+  text-align: center;
+  font-weight: 900;
+  margin-block: 2rem;
+}
+.new-arrivals-products, .favourite .favourite-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+@media (min-width: 43.75em) {
+  .new-arrivals-products, .favourite .favourite-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.new-arrivals .products-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.new-arrivals .products-container .product-image, .new-arrivals .products-container .favourite .favourite-products-image, .favourite .new-arrivals .products-container .favourite-products-image {
+  border-radius: 0.7rem;
+  width: 100%;
+  height: 14rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 40% 50%;
+     object-position: 40% 50%;
+}
+.new-arrivals .products-container .product-description-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.new-arrivals .products-container .product-description-container .product-title {
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.new-arrivals .products-container .product-description-container .explore {
+  font-size: 0.8rem;
+  color: var(--color-text-400);
+}
+.new-arrivals .products-container .product-description-container .product-description {
+  display: flex;
+  flex-direction: column;
+}
+.new-arrivals .products-container .product-description-container img {
+  width: 1.2rem;
+  height: auto;
+}
+.new-arrivals .products-container-more {
+  background-image: linear-gradient(rgb(236, 226, 178), rgb(238, 231, 198));
+  border: 0.2rem solid var(--color-primary);
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.new-arrivals .products-container-more span {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.cta {
+  margin-top: 4rem;
+  background-color: var(--color-primary);
+  padding: 2rem;
+}
+.cta-image {
+  display: none;
+}
+.cta-writeups {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+.cta-writeups-heading {
+  font-weight: 900;
+  font-size: 2rem;
+}
+.cta-writeups p {
+  font-weight: 500;
+}
+.cta-writeups-bold-paragraph {
+  font-weight: 700;
+}
+
+.favourite-heading {
+  text-align: center;
+  font-weight: 900;
+  margin-block: 2rem;
+}
+.favourite-products-image {
+  border-radius: 0.7rem;
+  width: 100%;
+  height: 15rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}/*# sourceMappingURL=main.css.map */

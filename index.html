@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/main.css" />
     <!-- Set the Favicon -->
     <link
@@ -24,12 +30,14 @@
               alt="logo image"
               width="237px"
               height="60px"
+              class="full-logo"
             />
             <img
               src="/assets/logos/logo 2.png"
               alt="logo image"
               width="32px"
               height="29px"
+              class="half-logo"
             />
           </div>
           <!-- Header/Primary Navigation -->
@@ -40,6 +48,7 @@
               <a href="#"><li>FAVORITE</li></a>
               <a href="#"><li>LIFESTYLE</li></a>
             </ul>
+            <!-- Add hamburger icon -->
             <button class="header-button button">SIGN UP</button>
           </nav>
         </div>
@@ -60,7 +69,7 @@
       </section>
     </div>
     <!-- Partners Section -->
-    <section class="partners">
+    <!-- <section class="partners">
       <div class="partners-wrapper">
         <img src="/assets/logos/HiM logo.png" alt="HIM logo" />
         <img src="/assets/logos/OBEY logo.png" alt="OBEY logo" />
@@ -69,15 +78,15 @@
         <img src="/assets/logos/levi-logo.png" alt="levi logo" />
         <img src="/assets/logos/amazon-logo.png" alt="amazon logo" />
       </div>
-    </section>
+    </section> -->
     <!-- New Arrivals Section -->
     <div class="wrapper">
       <section class="new-arrivals">
-        <h2 class="new-arrivals-heading heading">NEW ARRIBALS</h2>
+        <h2 class="new-arrivals-heading heading">NEW ARRIVALS</h2>
         <!-- New Arrivals - Image Carrousel -->
         <div class="new-arrivals-products">
           <div class="products-container">
-            <img src="/assets/images/new-1.jpg" alt="#" />
+            <img src="/assets/images/new-1.jpg" class="product-image" alt="#" />
             <div class="product-description-container">
               <div class="product-description">
                 <span class="product-title">Hoodie & Sweetshirt</span>
@@ -87,7 +96,7 @@
             </div>
           </div>
           <div class="products-container">
-            <img src="/assets/images/new-2.jpg" alt="#" />
+            <img src="/assets/images/new-2.jpg" class="product-image" alt="#" />
             <div class="product-description-container">
               <div class="product-description">
                 <span class="product-title">Coat & Parkas</span>
@@ -97,7 +106,7 @@
             </div>
           </div>
           <div class="products-container">
-            <img src="/assets/images/new-3.jpg" alt="#" />
+            <img src="/assets/images/new-3.jpg" class="product-image" alt="#" />
             <div class="product-description-container">
               <div class="product-description">
                 <span class="product-title">Tees & T-Shirt</span>
@@ -105,6 +114,9 @@
               </div>
               <img src="/assets/icons/arrow-icon.png" alt="arrow" />
             </div>
+          </div>
+          <div class="products-container-more">
+            <span>MORE!</span>
           </div>
         </div>
       </section>
@@ -116,11 +128,13 @@
       </div>
       <div class="cta-writeups">
         <!-- Add text effect -->
-        <h2 class="cta-heading heading">PAYDAY SALE NOW</h2>
-        <p class="cta-paragraph">
+        <h2 class="cta-writeups-heading heading">
+          <span class="text-effect">PAYDAY</span> SALE NOW
+        </h2>
+        <p class="cta-writeups-paragraph">
           Spend minimal $100 get 30% off voucher code for your next purchase
         </p>
-        <span class="bold-paragraph">1 June - 10 June 2021</span>
+        <span class="cta-writeups-bold-paragraph">1 June - 10 June 2021</span>
         <p class="cta-paragraph">Terms & Conditions apply</p>
         <button class="cta-button button">SHOP NOW</button>
       </div>
@@ -130,24 +144,26 @@
       <section class="favourite">
         <h2 class="favourite-heading heading">YOUNG'S FAVOURITE</h2>
         <!-- Favourite - Image Carrousel -->
-        <div class="favourite-products">
-          <img src="/assets/images/favourites-1.jpg" alt="#" />
-          <div class="product-description-container">
-            <div class="product-description">
-              <span class="product-title">Trending on Instagram</span>
-              <span class="explore">Explore Now!</span>
+        <div class="favourite-container">
+          <div class="products-container">
+            <img class="favourite-products-image" src="/assets/images/favourites-1.jpg" alt="#" />
+            <div class="product-description-container">
+              <div class="product-description">
+                <span class="product-title">Trending on Instagram</span>
+                <span class="explore">Explore Now!</span>
+              </div>
+              <img src="/assets/icons/arrow-icon.png" alt="arrow" />
             </div>
-            <img src="/assets/icons/arrow-icon.png" alt="arrow" />
           </div>
-        </div>
-        <div class="favourite-products">
-          <img src="/assets/images/favourites-2.jpg" alt="#" />
-          <div class="product-description-container">
-            <div class="product-description">
-              <span class="product-title">All Under $40</span>
-              <span class="explore">Explore Now!</span>
+          <div class="products-container">
+            <img class="favourite-products-image" src="/assets/images/favourites-2.jpg" alt="#" />
+            <div class="product-description-container">
+              <div class="product-description">
+                <span class="product-title">All Under $40</span>
+                <span class="explore">Explore Now!</span>
+              </div>
+              <img src="/assets/icons/arrow-icon.png" alt="arrow" />
             </div>
-            <img src="/assets/icons/arrow-icon.png" alt="arrow" />
           </div>
         </div>
       </section>
@@ -230,7 +246,7 @@
               <ul class="footer-navigation-list">
                 <a href="#"><li>Legal</li></a>
                 <a href="#"><li>Terma & Conditions</li></a>
-                <a href="#"><li>Privacy Policy/li></a>
+                <a href="#"><li>Privacy Policy/li></li></a>
               </ul>
             </nav>
           </div>
