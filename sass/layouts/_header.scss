@@ -1,11 +1,73 @@
+@use "../utilities" as u;
+
 .header {
-    margin-top: 1rem;
+  margin-top: 2rem;
 
+  &-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .full-logo {
+    display: none;
+  }
+
+  @include u.breakpoints-up(large) {
     .full-logo {
-        display: none;
+        display: block;
+        width: 12rem;
+        height: auto;
     }
 
-    &-navigation {
+    .half-logo {
         display: none;
     }
+}
+
+  &-navigation {
+    display: none;
+
+    @include u.breakpoints-up(large) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+
+        a {
+            color: var(--color-text-900);
+            font-weight: 700;
+            position: relative;
+
+            &::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 0;
+              height: 2px;
+              background-color: var(--color-primary);
+              transition: width 0.3s ease;
+            }
+
+            &:hover::after,
+            &:focus-visible::after {
+              width: 100%;
+            }
+
+            &:active {
+              color: var(--color-primary);
+            }
+        }
+    }
+  }
 }
