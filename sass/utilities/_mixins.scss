@@ -1,0 +1,17 @@
+@mixin text-effect {
+    display: inline-block;
+    position: relative;
+    padding-inline: 0.8rem;
+    z-index: 1;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: var(--color-primary);
+      z-index: -1;
+      transform: rotate(-2deg);
+      transform-origin: center;
+    }
+  }
+  

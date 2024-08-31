@@ -20,20 +20,7 @@
 
       // heading text effect
       .text-effect {
-        display: inline-block;
-        position: relative;
-        padding-inline: 0.8rem;
-        z-index: 1;
-
-        &::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background-color: var(--color-primary);
-          z-index: -1;
-          transform: rotate(-2deg);
-          transform-origin: center;
-        }
+        @include u.text-effect;
       }
     }
 
@@ -143,7 +130,8 @@
 .product-image {
   border-radius: 0.7rem;
   width: 100%;
-  height: 14rem;
+  // height: 14rem;
+  height: clamp(15rem, 5vw + 10rem, 30rem);
   object-fit: cover;
   object-position: 40% 50%;
 }
@@ -180,9 +168,24 @@
   margin-top: 4rem;
   background-color: var(--color-primary);
   padding: 2rem;
+  width: 100%;
 
   &-image {
     display: none;
+  }
+
+  @include u.breakpoints-up(large) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    gap: 10rem;
+
+    &-image {
+      display: block;
+      width: 20rem;
+    }
   }
 
   &-writeups {
@@ -193,9 +196,27 @@
     gap: 1rem;
     text-align: center;
 
+    @include u.breakpoints-up(large) {
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: left;
+      width: 50%;
+    }
+
     &-heading {
       font-weight: 900;
-      font-size: 2rem;
+      font-size: clamp(2rem, 3vw + 1.5rem, 5rem);
+      line-height: clamp(2.6rem, 2vw + 3rem, 6rem);
+
+      @include u.breakpoints-up(large) {
+        .text-effect {
+          @include u.text-effect;
+
+          &::before {
+            background-color: rgb(255, 255, 255);
+          }
+        }
+      }
     }
 
     p {
