@@ -50,6 +50,7 @@ a:visited {
 .button {
   background-color: rgb(0, 0, 0);
   color: var(--color-text-100);
+  font-weight: 700;
   padding: 0.8rem 1rem;
   border-radius: 0.4rem;
   border: none;
@@ -115,7 +116,7 @@ a:visited {
   font-weight: 900;
   margin-block: 2rem;
 }
-.new-arrivals-products, .favourite .favourite-container {
+.new-arrivals-products {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
@@ -123,48 +124,18 @@ a:visited {
   gap: 2rem;
 }
 @media (min-width: 43.75em) {
-  .new-arrivals-products, .favourite .favourite-container {
+  .new-arrivals-products {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-.new-arrivals .products-container {
+
+.products-container {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
   gap: 1rem;
 }
-.new-arrivals .products-container .product-image, .new-arrivals .products-container .favourite .favourite-products-image, .favourite .new-arrivals .products-container .favourite-products-image {
-  border-radius: 0.7rem;
-  width: 100%;
-  height: 14rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 40% 50%;
-     object-position: 40% 50%;
-}
-.new-arrivals .products-container .product-description-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.new-arrivals .products-container .product-description-container .product-title {
-  font-weight: 700;
-  font-size: 0.8rem;
-}
-.new-arrivals .products-container .product-description-container .explore {
-  font-size: 0.8rem;
-  color: var(--color-text-400);
-}
-.new-arrivals .products-container .product-description-container .product-description {
-  display: flex;
-  flex-direction: column;
-}
-.new-arrivals .products-container .product-description-container img {
-  width: 1.2rem;
-  height: auto;
-}
-.new-arrivals .products-container-more {
+.products-container-more {
   background-image: linear-gradient(rgb(236, 226, 178), rgb(238, 231, 198));
   border: 0.2rem solid var(--color-primary);
   border-radius: 0.8rem;
@@ -174,9 +145,42 @@ a:visited {
   height: 100%;
   width: 100%;
 }
-.new-arrivals .products-container-more span {
+.products-container-more span {
   color: var(--color-primary);
   font-weight: 700;
+}
+
+.product-image, .favourite-products-image {
+  border-radius: 0.7rem;
+  width: 100%;
+  height: 14rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 40% 50%;
+     object-position: 40% 50%;
+}
+
+.product-description-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-description-container .product-title {
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.product-description-container .explore {
+  font-size: 0.8rem;
+  color: var(--color-text-400);
+}
+.product-description-container .product-description {
+  display: flex;
+  flex-direction: column;
+}
+.product-description-container img {
+  width: 1.2rem;
+  height: auto;
 }
 
 .cta {
@@ -219,4 +223,85 @@ a:visited {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+.favourite .favourite-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.download {
+  margin-top: 2rem;
+}
+.download-writeups {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+.download-heading {
+  font-weight: 900;
+}
+.download-store-images {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.download-store-images img {
+  width: 6rem;
+  height: auto;
+}
+.download-mobile {
+  display: none;
+}
+
+.newsletter {
+  margin-top: 2rem;
+  background-color: var(--color-primary);
+  padding: 2rem;
+}
+.newsletter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+.newsletter-heading {
+  font-weight: 900;
+  color: var(--color-text-100);
+}
+.newsletter-paragraph {
+  color: var(--color-text-100);
+}
+.newsletter-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.newsletter-input input {
+  cursor: text;
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  border-radius: 0.4rem;
+  padding-left: 1rem;
+  font-weight: 700;
+}
+@media (min-width: 43.75em) {
+  .newsletter-input input {
+    width: 70%;
+  }
+}
+.footer {
+  background-color: #000;
+  color: var(--color-text-100);
+  padding-block: 2rem;
 }/*# sourceMappingURL=main.css.map */
