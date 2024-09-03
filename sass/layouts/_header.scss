@@ -16,27 +16,53 @@
 
   @include u.breakpoints-up(large) {
     .full-logo {
-        display: block;
-        width: 12rem;
-        height: auto;
+      display: block;
+      width: 12rem;
+      height: auto;
     }
 
     .half-logo {
-        display: none;
+      display: none;
     }
-}
+  }
 
   &-navigation {
-    display: none;
+    &-list,
+    button {
+      display: none;
+    }
+
+    .fa-bars {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+      font-size: 1.8rem;
+      width: 2rem;
+      height: 2rem;
+      text-align: center;
+      text-decoration: none;
+      color: var(--color-text-900);
+      border-radius: 0.5rem;
+    }
 
     @include u.breakpoints-up(large) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+
+      .fa-bars {
+        display: none;
+      }
+
+      button {
+        display: block;
+      }
     }
 
     &-list {
+      @include u.breakpoints-up(large) {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -44,30 +70,31 @@
         gap: 3rem;
 
         a {
-            color: var(--color-text-900);
-            font-weight: 700;
-            position: relative;
+          color: var(--color-text-900);
+          font-weight: 700;
+          position: relative;
 
-            &::after {
-              content: '';
-              position: absolute;
-              left: 0;
-              bottom: 0;
-              width: 0;
-              height: 2px;
-              background-color: var(--color-primary);
-              transition: width 0.3s ease;
-            }
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-primary);
+            transition: width 0.3s ease;
+          }
 
-            &:hover::after,
-            &:focus-visible::after {
-              width: 100%;
-            }
+          &:hover::after,
+          &:focus-visible::after {
+            width: 100%;
+          }
 
-            &:active {
-              color: var(--color-primary);
-            }
+          &:active {
+            color: var(--color-primary);
+          }
         }
+      }
     }
   }
 }

@@ -20,7 +20,15 @@
   }
 
   &-left {
-    // for left
+    &-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
     &-social-icons {
       display: flex;
       flex-direction: row;
@@ -30,15 +38,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 1.5rem;
+        padding: 1.2rem;
         font-size: 1.8rem;
-        width: 2rem;
-        height: 2rem;
+        width: 1.2rem;
+        height: 1.2rem;
         text-align: center;
         text-decoration: none;
         background-color: var(--color-primary);
         color: var(--color-text-900);
-        border-radius: .5rem;
+        border-radius: 0.5rem;
 
         &:hover,
         &:focus-visible {
