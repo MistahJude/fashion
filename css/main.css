@@ -120,9 +120,66 @@ a:visited {
 }
 
 .footer {
-  background-color: #000;
+  background-color: #000000;
   color: var(--color-text-100);
-  padding-block: 2rem;
+  padding: 2rem;
+}
+@media (min-width: 56.25em) {
+  .footer {
+    padding: 4rem 4rem 7rem;
+  }
+}
+@media (min-width: 56.25em) {
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footer-left-social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.footer-left-social-icons .fa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: var(--color-text-900);
+  border-radius: 0.5rem;
+}
+.footer-left-social-icons .fa:hover, .footer-left-social-icons .fa:focus-visible {
+  opacity: 0.7;
+}
+.footer-navigation {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 56.25em) {
+  .footer-navigation {
+    flex-direction: row;
+    gap: 10rem;
+  }
+}
+.footer-navigation li {
+  line-height: 2;
+}
+.footer-right a {
+  color: rgb(231, 231, 231);
+  font-weight: 200;
+}
+.footer-right a:hover, .footer-right a:focus-visible {
+  text-decoration: underline;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  text-underline-offset: 0.2rem;
 }
 
 .wrapper {
@@ -217,10 +274,30 @@ a:visited {
 .new-arrivals {
   margin-top: 3rem;
 }
-.new-arrivals-heading {
+.new-arrivals-heading, .favourite-heading {
   text-align: center;
   font-weight: 900;
   margin-block: 2rem;
+}
+.new-arrivals-heading .highlighted-text, .favourite-heading .highlighted-text {
+  position: relative;
+  display: inline-block;
+}
+.new-arrivals-heading .highlighted-text::before, .favourite-heading .highlighted-text::before {
+  content: "";
+  position: absolute;
+  inset: 0.9rem 0 0 0;
+  height: 50%;
+  width: 100%;
+  background-color: var(--color-primary);
+  z-index: -1;
+  transform: rotate(-3deg);
+  border-radius: 50%;
+}
+@media (min-width: 56.25em) {
+  .new-arrivals-heading, .favourite-heading {
+    text-align: left;
+  }
 }
 .new-arrivals-products {
   display: grid;
@@ -292,20 +369,19 @@ a:visited {
 .cta {
   margin-top: 4rem;
   background-color: var(--color-primary);
-  padding: 2rem;
   width: 100%;
+  padding-block: 2rem;
 }
 .cta-image {
   display: none;
 }
 @media (min-width: 56.25em) {
-  .cta {
+  .cta-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 0;
-    gap: 10rem;
   }
   .cta-image {
     display: block;
@@ -325,7 +401,7 @@ a:visited {
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
-    width: 50%;
+    width: 40%;
   }
 }
 .cta-writeups-heading {
@@ -333,25 +409,23 @@ a:visited {
   font-size: clamp(2rem, 3vw + 1.5rem, 5rem);
   line-height: clamp(2.6rem, 2vw + 3rem, 6rem);
 }
-@media (min-width: 56.25em) {
-  .cta-writeups-heading .text-effect {
-    display: inline-block;
-    position: relative;
-    padding-inline: 0.8rem;
-    z-index: 1;
-  }
-  .cta-writeups-heading .text-effect::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: var(--color-primary);
-    z-index: -1;
-    transform: rotate(-2deg);
-    transform-origin: center;
-  }
-  .cta-writeups-heading .text-effect::before {
-    background-color: rgb(255, 255, 255);
-  }
+.cta-writeups-heading .text-effect {
+  display: inline-block;
+  position: relative;
+  padding-inline: 0.8rem;
+  z-index: 1;
+}
+.cta-writeups-heading .text-effect::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-primary);
+  z-index: -1;
+  transform: rotate(-2deg);
+  transform-origin: center;
+}
+.cta-writeups-heading .text-effect::before {
+  background-color: rgb(255, 255, 255);
 }
 .cta-writeups p {
   font-weight: 500;
@@ -360,11 +434,6 @@ a:visited {
   font-weight: 700;
 }
 
-.favourite-heading {
-  text-align: center;
-  font-weight: 900;
-  margin-block: 2rem;
-}
 .favourite-products-image {
   border-radius: 0.7rem;
   width: 100%;
@@ -384,6 +453,15 @@ a:visited {
 .download {
   margin-top: 2rem;
 }
+@media (min-width: 56.25em) {
+  .download-container {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 .download-writeups {
   display: flex;
   flex-direction: column;
@@ -391,6 +469,14 @@ a:visited {
   align-items: center;
   gap: 1rem;
   text-align: center;
+}
+@media (min-width: 56.25em) {
+  .download-writeups {
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    width: 30%;
+  }
 }
 .download-heading {
   font-weight: 900;
@@ -406,6 +492,12 @@ a:visited {
 }
 .download-mobile {
   display: none;
+}
+@media (min-width: 56.25em) {
+  .download-mobile {
+    display: block;
+    width: 20rem;
+  }
 }
 
 .newsletter {
@@ -425,6 +517,16 @@ a:visited {
   font-weight: 900;
   color: var(--color-text-100);
 }
+@media (min-width: 43.75em) {
+  .newsletter-heading {
+    width: 70%;
+  }
+}
+@media (min-width: 56.25em) {
+  .newsletter-heading {
+    width: 50%;
+  }
+}
 .newsletter-paragraph {
   color: var(--color-text-100);
 }
@@ -435,6 +537,12 @@ a:visited {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  position: relative;
+}
+@media (min-width: 56.25em) {
+  .newsletter-input {
+    display: inline-block;
+  }
 }
 .newsletter-input input {
   cursor: text;
@@ -445,8 +553,27 @@ a:visited {
   padding-left: 1rem;
   font-weight: 700;
 }
+.newsletter-input input::-moz-placeholder {
+  color: rgb(155, 155, 155);
+}
+.newsletter-input input::placeholder {
+  color: rgb(155, 155, 155);
+}
 @media (min-width: 43.75em) {
   .newsletter-input input {
     width: 70%;
+  }
+}
+@media (min-width: 56.25em) {
+  .newsletter-input input {
+    width: 30%;
+    height: 3rem;
+  }
+}
+@media (min-width: 56.25em) {
+  .newsletter-input button {
+    position: absolute;
+    margin-left: -4.6rem;
+    margin-top: 0.22rem;
   }
 }/*# sourceMappingURL=main.css.map */

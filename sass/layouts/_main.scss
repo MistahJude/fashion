@@ -87,6 +87,15 @@
     text-align: center;
     font-weight: 900;
     margin-block: 2rem;
+    
+    // highlighted text effect
+    .highlighted-text {
+      @include u.highlighted-text;
+    }
+
+    @include u.breakpoints-up(large) {
+      text-align: left;
+    }
   }
 
   &-products {
@@ -167,20 +176,21 @@
 .cta {
   margin-top: 4rem;
   background-color: var(--color-primary);
-  padding: 2rem;
   width: 100%;
+  padding-block: 2rem;
 
   &-image {
     display: none;
   }
 
   @include u.breakpoints-up(large) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    gap: 10rem;
+    &-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0;
+    }
 
     &-image {
       display: block;
@@ -200,21 +210,18 @@
       justify-content: flex-start;
       align-items: flex-start;
       text-align: left;
-      width: 50%;
+      width: 40%;
     }
 
     &-heading {
       font-weight: 900;
       font-size: clamp(2rem, 3vw + 1.5rem, 5rem);
       line-height: clamp(2.6rem, 2vw + 3rem, 6rem);
+      .text-effect {
+        @include u.text-effect;
 
-      @include u.breakpoints-up(large) {
-        .text-effect {
-          @include u.text-effect;
-
-          &::before {
-            background-color: rgb(255, 255, 255);
-          }
+        &::before {
+          background-color: rgb(255, 255, 255);
         }
       }
     }
@@ -232,9 +239,7 @@
 // Favourite Section
 .favourite {
   &-heading {
-    text-align: center;
-    font-weight: 900;
-    margin-block: 2rem;
+    @extend .new-arrivals-heading;
   }
 
   &-products-image {
@@ -262,6 +267,16 @@
 .download {
   margin-top: 2rem;
 
+  &-container {
+    @include u.breakpoints-up(large) {
+      margin-top: 5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+
   &-writeups {
     display: flex;
     flex-direction: column;
@@ -269,6 +284,13 @@
     align-items: center;
     gap: 1rem;
     text-align: center;
+
+    @include u.breakpoints-up(large) {
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+      width: 30%;
+    }
   }
 
   &-heading {
@@ -288,6 +310,11 @@
 
   &-mobile {
     display: none;
+
+    @include u.breakpoints-up(large) {
+      display: block;
+      width: 20rem;
+    }
   }
 }
 
@@ -308,6 +335,14 @@
   &-heading {
     font-weight: 900;
     color: var(--color-text-100);
+
+    @include u.breakpoints-up(medium) {
+      width: 70%;
+    }
+
+    @include u.breakpoints-up(large) {
+      width: 50%;
+    }
   }
 
   &-paragraph {
@@ -321,10 +356,13 @@
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    // position: relative;
+    position: relative;
+
+    @include u.breakpoints-up(large) {
+      display: inline-block;
+    }
 
     input {
-      // change height to 3rem for large view
       cursor: text;
       width: 100%;
       height: 2.5rem;
@@ -333,15 +371,26 @@
       padding-left: 1rem;
       font-weight: 700;
 
+      &::placeholder {
+        color: rgb(155, 155, 155);
+      }
+
       @include u.breakpoints-up(medium) {
         width: 70%;
+      }
+
+      @include u.breakpoints-up(large) {
+        width: 30%;
+        height: 3rem;
       }
     }
 
     button {
-      // position: absolute;
-      // margin-left: -4.6rem;
-      // margin-top: .2rem;
+      @include u.breakpoints-up(large) {
+        position: absolute;
+        margin-left: -4.6rem;
+        margin-top: 0.22rem;
+      }
     }
   }
 }

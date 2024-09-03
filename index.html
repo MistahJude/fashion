@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -84,7 +88,9 @@
     <!-- New Arrivals Section -->
     <div class="wrapper">
       <section class="new-arrivals">
-        <h2 class="new-arrivals-heading heading">NEW ARRIVALS</h2>
+        <h2 class="new-arrivals-heading heading">
+          NEW <span class="highlighted-text">ARRIVALS</span>
+        </h2>
         <!-- New Arrivals - Image Carrousel -->
         <div class="new-arrivals-products">
           <div class="products-container">
@@ -125,26 +131,34 @@
     </div>
     <!-- CTA section -->
     <section class="cta">
-      <div class="cta-image">
-        <img src="/assets/images/cta-image.png" alt="image" />
-      </div>
-      <div class="cta-writeups">
-        <!-- Add text effect -->
-        <h2 class="cta-writeups-heading heading">
-          <span class="text-effect">PAYDAY</span> SALE NOW
-        </h2>
-        <p class="cta-writeups-paragraph">
-          Spend minimal $100 get 30% off voucher code for your next purchase
-        </p>
-        <span class="cta-writeups-bold-paragraph">1 June - 10 June 2021</span>
-        <p class="cta-paragraph">Terms & Conditions apply</p>
-        <button class="cta-button button">SHOP NOW</button>
+      <div class="wrapper">
+        <div class="cta-container">
+          <div class="cta-image">
+            <img src="/assets/images/cta-image.png" alt="image" />
+          </div>
+          <div class="cta-writeups">
+            <!-- Add text effect -->
+            <h2 class="cta-writeups-heading heading">
+              <span class="text-effect">PAYDAY</span> SALE NOW
+            </h2>
+            <p class="cta-writeups-paragraph">
+              Spend minimal $100 get 30% off voucher code for your next purchase
+            </p>
+            <span class="cta-writeups-bold-paragraph"
+              >1 June - 10 June 2021</span
+            >
+            <p class="cta-paragraph">Terms & Conditions apply</p>
+            <button class="cta-button button">SHOP NOW</button>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Favourite Section -->
     <div class="wrapper">
       <section class="favourite">
-        <h2 class="favourite-heading heading">YOUNG'S FAVOURITE</h2>
+        <h2 class="favourite-heading heading">
+          YOUNG'S <span class="highlighted-text">FAVOURITE</span>
+        </h2>
         <!-- Favourite - Image Carrousel -->
         <div class="favourite-container">
           <div class="products-container">
@@ -222,7 +236,7 @@
     </section>
     <!-- Footer Section -->
     <footer class="footer">
-      <div class="wrapper">
+      <div class="wrapper footer-container">
         <!-- Footer - Left content -->
         <div class="footer-left">
           <div class="footer-left-container">
@@ -232,6 +246,10 @@
             </p>
             <div class="footer-left-social-icons">
               <!-- Add social icons -->
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-linkedin"></a>
             </div>
           </div>
         </div>
@@ -240,23 +258,23 @@
           <div class="footer-right-container">
             <nav class="footer-navigation">
               <ul class="footer-navigation-list">
-                <a href="#"><li>Company</li></a>
-                <a href="#"><li>About</li></a>
-                <a href="#"><li>Contact us</li></a>
-                <a href="#"><li>Support</li></a>
-                <a href="#"><li>Careers</li></a>
+                <li>Company</li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Careers</a></li>
               </ul>
               <ul class="footer-navigation-list">
-                <a href="#"><li>Quick Link</li></a>
-                <a href="#"><li>Share Location</li></a>
-                <a href="#"><li>Order Tracking</li></a>
-                <a href="#"><li>Size Guide</li></a>
-                <a href="#"><li>FAQs</li></a>
+                <li>Quick Link</li>
+                <li><a href="#">Share Location</a></li>
+                <li><a href="#">Order Tracking</a></li>
+                <li><a href="#">Size Guide</a></li>
+                <li><a href="#">FAQs</a></li>
               </ul>
               <ul class="footer-navigation-list">
-                <a href="#"><li>Legal</li></a>
-                <a href="#"><li>Terma & Conditions</li></a>
-                <a href="#"><li>Privacy Policy/li></li></a>
+                <li>Legal</li>
+                <li><a href="#">Terma & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
               </ul>
             </nav>
           </div>

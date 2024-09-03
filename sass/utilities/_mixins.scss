@@ -1,17 +1,33 @@
 @mixin text-effect {
-    display: inline-block;
-    position: relative;
-    padding-inline: 0.8rem;
-    z-index: 1;
-  
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-color: var(--color-primary);
-      z-index: -1;
-      transform: rotate(-2deg);
-      transform-origin: center;
-    }
+  display: inline-block;
+  position: relative;
+  padding-inline: 0.8rem;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-primary);
+    z-index: -1;
+    transform: rotate(-2deg);
+    transform-origin: center;
   }
-  
+}
+
+@mixin highlighted-text {
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0.9rem 0 0 0;
+    height: 50%;
+    width: 100%;
+    background-color: var(--color-primary);
+    z-index: -1;
+    transform: rotate(-3deg);
+    border-radius: 50%;
+  }
+}

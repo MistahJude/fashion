@@ -1,5 +1,78 @@
+@use "../utilities" as u;
+
 .footer {
-    background-color: #000;
-    color: var(--color-text-100);
-    padding-block: 2rem;
+  background-color: #000000;
+  color: var(--color-text-100);
+  padding: 2rem;
+
+  @include u.breakpoints-up(large) {
+    padding: 4rem 4rem 7rem;
   }
+
+  &-container {
+    // mobile styles
+
+    @include u.breakpoints-up(large) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &-left {
+    // for left
+    &-social-icons {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+
+      .fa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
+        font-size: 1.8rem;
+        width: 2rem;
+        height: 2rem;
+        text-align: center;
+        text-decoration: none;
+        background-color: var(--color-primary);
+        color: var(--color-text-900);
+        border-radius: .5rem;
+
+        &:hover,
+        &:focus-visible {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &-navigation {
+    display: flex;
+    flex-direction: column;
+    @include u.breakpoints-up(large) {
+      flex-direction: row;
+      gap: 10rem;
+    }
+
+    li {
+      line-height: 2;
+    }
+  }
+
+  &-right {
+    a {
+      color: rgb(231, 231, 231);
+      font-weight: 200;
+
+      &:hover,
+      &:focus-visible {
+        text-decoration: underline;
+        text-decoration-skip-ink: auto;
+        text-underline-offset: 0.2rem;
+      }
+    }
+    // add styles
+  }
+}
